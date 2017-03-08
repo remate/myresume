@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+
+    <title></title>
+</head>
+<style>
+    *{ margin: 0px; padding: 0px;}
+    div{
+        width:200px;
+        height:200px;
+        border:20px solid black;
+        background: firebrick;
+        padding:5px;
+    }
+</style>
+<body>
+<div class="a"></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div class="b">asdas</div>
+<div></div>
+<div></div>
+<script src="jquery-1.10.1.min.js"></script>
+<script>
+    var a={
+        1:3,
+        2:3,
+        5:4
+    }
+    console.log(Object.keys(a))
+    $('.a').click(function(){
+       document.getElementsByClassName('b')[0].scrollIntoView(true);
+    })
+    var divTemp = document.createElement("div"), nodes = null
+    // 文档片段，一次性append，提高性能
+            , fragment = document.createDocumentFragment();
+    divTemp.innerHTML = '<div>sa</div>';
+    nodes = divTemp.childNodes;
+    for (var i=0, length=nodes.length; i<length; i+=1) {
+        fragment.appendChild(nodes[i].cloneNode(true));
+    }
+    document.body.appendChild(fragment);
+
+</script>
+</body>
+</html>

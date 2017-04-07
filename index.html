@@ -2,14 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link type="text/css" rel="stylesheet" href="./dist/css/index.css"/>
+    <title>resume</title>
+    <link type="text/css" rel="stylesheet" href="index.css"/>
+    <link href="/favicon.ico" type="image/x-icon"/>
+    <link type="text/css" rel="stylesheet" href="fullpage.css"/>
 </head>
 <body>
-<div id="app">
-    <div class="header-wrapper">{{name}}</div>
+<div class="header-wrapper">
+    <div class="left-wrap">
+        <img src="http://xquser.xiangqu.com/FkLhb3xrwUTsnc_DnQ4ZuaQJPCW0?imageView2/2/w/100/q/90/format/jpg/100x100/" alt="左慈">
+        <div class="info-lay">
+            <div class="name">左慈</div>
+            <div class="job">左左天才</div>
+        </div>
+    </div>
 </div>
-<script src="vue.min.js"></script>
-<script src="./dist/js/index.min.js"></script>
+<div id="fullpage">
+    <div class="section page page1"></div>
+    <div class="section page page2"></div>
+    <div class="section page page3"></div>
+    <div class="section page page4"></div>
+    <div class="section page page5"></div>
+    <div class="section page page6"></div>
+</div>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="fullPage.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            //Navigation
+            menu: '#menu',
+            lockAnchors: false,
+            anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage','fifthPage','sixthPage'],
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['首页', '关于我','技能','经历','作品集','联系我'],
+            showActiveTooltip: false,
+            slidesNavigation: false,
+            slidesNavPosition: 'bottom',
+            css3: true,
+            scrollingSpeed: 700,
+            autoScrolling: true,
+            fitToSection: true,
+            fitToSectionDelay: 1000,
+            scrollBar: false,
+            easing: 'easeInOutCubic',
+            easingcss3: 'ease',
+            loopBottom: false,
+            loopTop: false,
+            loopHorizontal: true,
+            continuousVertical: false,
+            continuousHorizontal: false,
+            scrollHorizontally: false,
+            interlockedSlides: false,
+            dragAndMove: false,
+            offsetSections: false,
+            resetSliders: false,
+            fadingEffect: false,
+            normalScrollElements: '#element1, .element2',
+            scrollOverflow: false,
+            scrollOverflowReset: false,
+            scrollOverflowOptions: null,
+            touchSensitivity: 15,
+            normalScrollElementTouchThreshold: 5,
+            bigSectionsDestination: null,
+
+            //Accessibility
+            keyboardScrolling: true,
+            animateAnchor: true,
+            recordHistory: true,
+
+            //Design
+            controlArrows: true,
+            verticalCentered: true,
+            sectionsColor : ['#4d5e8f','#945c4c','#109085','#4b85a0','#87b0a5','#a29971'],
+            fixedElements: '#header, .footer',
+            responsiveWidth: 0,
+            responsiveHeight: 0,
+            responsiveSlides: false,
+            parallax: false,
+            parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+
+            //Custom selectors
+            sectionSelector: '.section',
+            slideSelector: '.slide',
+
+            lazyLoading: true,
+
+            //events
+            onLeave: function(index, nextIndex, direction){},
+            afterLoad: function(anchorLink, index){},
+            afterRender: function(){},
+            afterResize: function(){},
+            afterResponsive: function(isResponsive){},
+            afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+            onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+        });
+        function activeWatch(){
+            let activeName = ['icon-home2','icon-envelop','icon-keyboard','icon-user','icon-embed2','icon-dropbox']
+            let activeIndex = $(this).index();
+            $(this).find('a').addClass(activeName[activeIndex]+' '+'immfont').empty().end().siblings().find('a').removeAttr('class').empty().append('<span></span>');
+        }
+        $('ul li').click(activeWatch);
+    });
+</script>
 </body>
 </html>

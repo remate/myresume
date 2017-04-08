@@ -26,12 +26,11 @@
     <div class="section page page6"></div>
 </div>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="fullPage.min.js"></script>
+<script src="fullPage.js"></script>
 <script>
     $(document).ready(function() {
         $('#fullpage').fullpage({
             //Navigation
-            menu: '#menu',
             lockAnchors: false,
             anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage','fifthPage','sixthPage'],
             navigation: true,
@@ -99,11 +98,11 @@
             onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
         });
         function activeWatch(){
-            let activeName = ['icon-home2','icon-envelop','icon-keyboard','icon-user','icon-embed2','icon-dropbox']
+            let activeName = ['icon-home2','icon-user','icon-keyboard','icon-dropbox','icon-embed2','icon-envelop'];
             let activeIndex = $(this).index();
             $(this).find('a').addClass(activeName[activeIndex]+' '+'immfont').empty().end().siblings().find('a').removeAttr('class').empty().append('<span></span>');
         }
-        $('ul li').click(activeWatch);
+//        $('ul li').click(activeWatch);
     });
 </script>
 </body>

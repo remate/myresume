@@ -217,7 +217,7 @@ html.fp-enabled,
   border-bottom: 13px solid transparent;
   border-left: 13px solid #000;
   right:-13px;
-  top:1px;
+  top:0;
 }
 #fp-nav ul li:hover .fp-tooltip,
 #fp-nav.fp-show-active a.active + .fp-tooltip {

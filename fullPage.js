@@ -737,6 +737,7 @@
                 silentLandscapeScroll(startingSlide, 'internal');
             }else{
                 slides.eq(0).addClass(ACTIVE);
+                console.log(740)
             }
         }
 
@@ -747,6 +748,7 @@
             //if no active section is defined, the 1st one will be the default one
             if(!index && $(SECTION_ACTIVE_SEL).length === 0) {
                 section.addClass(ACTIVE);
+                // console.log(751+'no')
             }
             startingSection = $(SECTION_ACTIVE_SEL);
 
@@ -846,7 +848,8 @@
             $(SECTION_NAV_SEL).css('margin-top', '-' + ($(SECTION_NAV_SEL).height()/2) + 'px');
 
             //activating the current active section
-            $(SECTION_NAV_SEL).find('li').eq($(SECTION_ACTIVE_SEL).index(SECTION_SEL)).find('a').addClass(ACTIVE);
+            $(SECTION_NAV_SEL).find('li').eq($(SECTION_ACTIVE_SEL).index(SECTION_SEL)).find('a').addClass(ACTIVE+' '+'icon-home2'+' '+'immfont').empty();
+            // console.log(852)
         }
 
         /**
@@ -993,6 +996,7 @@
 
                     if(canScroll){
                         currentSection.addClass(ACTIVE).siblings().removeClass(ACTIVE);
+                        console.log(999)
 
                         $.isFunction( options.onLeave ) && options.onLeave.call( leavingSection, leavingSectionIndex, sectionIndex, yMovement);
                         $.isFunction( options.afterLoad ) && options.afterLoad.call( currentSection, anchorLink, sectionIndex);
@@ -1453,6 +1457,7 @@
 
             options.scrollOverflowHandler.beforeLeave();
             element.addClass(ACTIVE).siblings().removeClass(ACTIVE);
+            // console.log(1460)
             lazyLoad(element);
             options.scrollOverflowHandler.onLeave();
 
@@ -1992,6 +1997,7 @@
             }
 
             destiny.addClass(ACTIVE).siblings().removeClass(ACTIVE);
+            console.log(2000)
 
             if(!v.localIsResizing){
                 stopMedia(v.prevSlide);
@@ -2065,6 +2071,7 @@
         function activeSlidesNavigation(slidesNav, slideIndex){
             slidesNav.find(ACTIVE_SEL).removeClass(ACTIVE);
             slidesNav.find('li').eq(slideIndex).find('a').addClass(ACTIVE);
+            console.log(2074)
         }
 
         var previousHeight = windowsHeight;
@@ -2146,12 +2153,16 @@
          * Activating the vertical navigation bullets according to the given slide name.
          */
         function activateNavDots(name, sectionIndex){
+            var activeName = ['icon-home2','icon-user','icon-keyboard','icon-dropbox','icon-embed2','icon-envelop'];
             if(options.navigation){
-                $(SECTION_NAV_SEL).find(ACTIVE_SEL).removeClass(ACTIVE);
+                // $(SECTION_NAV_SEL).find(ACTIVE_SEL).removeClass(ACTIVE);
+                $(SECTION_NAV_SEL).find(ACTIVE_SEL).removeAttr('class').empty().append('<span></span>');
                 if(name){
-                    $(SECTION_NAV_SEL).find('a[href="#' + name + '"]').addClass(ACTIVE);
+                    $(SECTION_NAV_SEL).find('a[href="#' + name + '"]').addClass(ACTIVE+' '+activeName[sectionIndex]+' '+'immfont').empty();
+                    // console.log(2160+'no')
                 }else{
-                    $(SECTION_NAV_SEL).find('li').eq(sectionIndex).find('a').addClass(ACTIVE);
+                    $(SECTION_NAV_SEL).find('li').eq(sectionIndex).find('a').addClass(ACTIVE+' '+activeName[sectionIndex]+' '+'immfont').empty();
+                    // console.log(2163+'no')
                 }
             }
         }
@@ -2163,6 +2174,7 @@
             if(options.menu){
                 $(options.menu).find(ACTIVE_SEL).removeClass(ACTIVE);
                 $(options.menu).find('[data-menuanchor="'+name+'"]').addClass(ACTIVE);
+                // console.log(2175+'NO')
             }
         }
 
@@ -2388,6 +2400,7 @@
             nav.css('margin-left', '-' + (nav.width()/2) + 'px');
 
             nav.find('li').first().find('a').addClass(ACTIVE);
+            console.log(2401)
         }
 
 

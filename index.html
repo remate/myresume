@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>resume</title>
+    <meta name="v">
     <link type="text/css" rel="stylesheet" href="index.css"/>
     <link href="/favicon.ico" type="image/x-icon"/>
     <link type="text/css" rel="stylesheet" href="fullpage.css"/>
@@ -12,13 +13,16 @@
     <div class="left-wrap">
         <img src="http://xquser.xiangqu.com/FkLhb3xrwUTsnc_DnQ4ZuaQJPCW0?imageView2/2/w/100/q/90/format/jpg/100x100/" alt="左慈">
         <div class="info-lay">
-            <div class="name">左慈</div>
-            <div class="job">左左天才</div>
+            <div class="name">罗穆翔</div>
+            <div class="job">前端开发工程师</div>
         </div>
     </div>
 </div>
 <div id="fullpage">
-    <div class="section page page1"></div>
+    <div class="section page page1">
+        <div class="imgwrap"></div>
+        <div class="title">不积跬步，无以至千里；不积小流，无以成江海。</div>
+    </div>
     <div class="section page page2"></div>
     <div class="section page page3"></div>
     <div class="section page page4"></div>
@@ -97,12 +101,6 @@
             afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
             onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
         });
-        function activeWatch(){
-            let activeName = ['icon-home2','icon-user','icon-keyboard','icon-dropbox','icon-embed2','icon-envelop'];
-            let activeIndex = $(this).index();
-            $(this).find('a').addClass(activeName[activeIndex]+' '+'immfont').empty().end().siblings().find('a').removeAttr('class').empty().append('<span></span>');
-        }
-//        $('ul li').click(activeWatch);
     });
 </script>
 </body>

@@ -123,12 +123,16 @@ form {
         opacity: .4;
         margin-right: 11px; }
 
-#fullpage .page1, #fullpage .page2 {
+#fullpage .page1, #fullpage .page2, #fullpage .page3, #fullpage .page4, #fullpage .page5, #fullpage .page6 {
   display: flex;
   overflow: hidden;
   position: relative;
   flex-direction: column;
   align-items: center; }
+  #fullpage .page1 h2, #fullpage .page2 h2, #fullpage .page3 h2, #fullpage .page4 h2, #fullpage .page5 h2, #fullpage .page6 h2 {
+    font-size: 22px;
+    color: #fff;
+    margin-top: 80px; }
 #fullpage .page1 .imgwrap {
   flex: 0 0 150px;
   width: 150px;
@@ -136,7 +140,7 @@ form {
   border-radius: 50%;
   overflow: hidden;
   margin-top: 120px;
-  background: url("images/1.JPG") no-repeat;
+  background: url("images/1.jpg") no-repeat;
   background-size: cover;
   opacity: .8; }
   #fullpage .page1 .imgwrap:hover {
@@ -149,10 +153,6 @@ form {
   text-align: center;
   font-size: 22px;
   color: #fff; }
-#fullpage .page2 h2 {
-  font-size: 22px;
-  color: #fff;
-  margin-top: 80px; }
 #fullpage .page2 .info-wrapper {
   position: relative;
   width: 800px;

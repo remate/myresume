@@ -135,12 +135,17 @@ form {
 }
 
 #fullpage{
-  .page1,.page2{
+  .page1,.page2,.page3,.page4,.page5,.page6{
     display: flex;
     overflow: hidden;
     position: relative;
     flex-direction: column;
     align-items: center;
+    h2{
+      font-size: 22px;
+      color: #fff;
+      margin-top: 80px;
+    }
   }
   .page1{
     .imgwrap{
@@ -150,7 +155,7 @@ form {
       border-radius: 50%;
       overflow: hidden;
       margin-top:120px;
-      background: url("images/1.JPG") no-repeat;
+      background: url("images/1.jpg") no-repeat;
       background-size: cover;
       opacity: .8;
       &:hover{
@@ -168,11 +173,6 @@ form {
     }
   }
   .page2{
-    h2{
-      font-size: 22px;
-      color: #fff;
-      margin-top: 80px;
-    }
     .info-wrapper{
       .tag{
         height:26px;

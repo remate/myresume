@@ -154,10 +154,35 @@ form {
   color: #fff;
   margin-top: 80px; }
 #fullpage .page2 .info-wrapper {
+  position: relative;
   width: 800px;
   margin-top: 50px;
   display: flex;
   justify-content: space-around; }
+  #fullpage .page2 .info-wrapper .tag {
+    height: 26px;
+    line-height: 26px;
+    padding: 0 5px 0 3px;
+    background: #ab7160;
+    color: #fff;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 3px;
+    opacity: 0;
+    transition: all .5s ease; }
+    #fullpage .page2 .info-wrapper .tag:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 13px solid transparent;
+      border-bottom: 13px solid transparent;
+      border-right: 13px solid #ab7160;
+      left: -13px;
+      top: 0; }
+  #fullpage .page2 .info-wrapper .icon-wrapper:hover .tag {
+    margin-left: 13px;
+    opacity: 1; }
   #fullpage .page2 .info-wrapper .icon {
     text-align: center;
     line-height: 110px;
@@ -185,6 +210,15 @@ form {
     color: #fff;
     margin-top: 30px;
     font-size: 20px; }
+#fullpage .page2 ul {
+  margin-top: 70px; }
+  #fullpage .page2 ul li {
+    text-align: center;
+    line-height: 23px;
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 2px; }
 
 .icon-home2:before {
   content: "\e901"; }

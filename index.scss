@@ -135,12 +135,14 @@ form {
 }
 
 #fullpage{
-  .page1{
+  .page1,.page2{
     display: flex;
     overflow: hidden;
     position: relative;
     flex-direction: column;
     align-items: center;
+  }
+  .page1{
     .imgwrap{
       flex:0 0 150px;
       width:150px;
@@ -163,6 +165,54 @@ form {
       text-align: center;
       font-size: 22px;
       color: #fff;
+    }
+  }
+  .page2{
+    h2{
+      font-size: 22px;
+      color: #fff;
+      margin-top: 80px;
+    }
+    .info-wrapper{
+      width:800px;
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-around;
+      .icon{
+        text-align: center;
+        line-height: 110px;
+        width:110px;
+        height:110px;
+        border-radius: 50%;
+        background: rgb(171, 113, 96);
+        border:1px solid rgb(171, 113, 96);
+        transition: background .6s ease;
+        &.icon-accessibility:before{
+          content: "\e9b2";
+        }
+        &.icon-location2:before {
+          content: "\e948";
+        }
+        &.icon-history:before {
+          content: "\e94d";
+        }
+        &.icon-books:before {
+          content: "\e920";
+        }
+        &::before{
+          color: #fff;
+          font-size: 58px;
+        }
+        &:hover{
+          background: rgb(148, 92, 76);
+        }
+      }
+      .title{
+        text-align: center;
+        color: #fff;
+        margin-top: 30px;
+        font-size: 20px;
+      }
     }
   }
 }

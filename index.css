@@ -387,6 +387,48 @@ form {
             list-style: disc;
             color: #000;
             margin-top: 10px; }
+#fullpage .page5 .do-wrapper {
+  overflow: hidden;
+  margin-top: 42px;
+  width: 750px;
+  height: 400px;
+  background: #eee;
+  display: flex; }
+  #fullpage .page5 .do-wrapper .do-list {
+    width: 250px;
+    border: 2px solid #fff; }
+    #fullpage .page5 .do-wrapper .do-list .doWrapper {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      font-size: 0;
+      padding: 10px;
+      text-align: justify; }
+      #fullpage .page5 .do-wrapper .do-list .doWrapper h3 {
+        font-size: 18px;
+        color: darkcyan;
+        text-align: center;
+        font-weight: 600;
+        margin-top: 20px; }
+      #fullpage .page5 .do-wrapper .do-list .doWrapper div {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #000;
+        line-height: 25px; }
+      #fullpage .page5 .do-wrapper .do-list .doWrapper .link {
+        cursor: pointer;
+        position: absolute;
+        display: block;
+        width: 230px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        background: goldenrod;
+        left: 10px;
+        bottom: 25px; }
 #fullpage .page6 .contact-wrapper {
   color: #fff;
   width: 336px;

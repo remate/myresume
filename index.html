@@ -73,7 +73,54 @@
             <div class="tag three">Angular</div>
         </div>
     </div>
-    <div class="section page page4"></div>
+    <div class="section page page4">
+        <h2>经历</h2>
+        <div class="page-wrapper">
+            <div class="change">
+                <span class="turn left" data-click-type="left"><</span>
+                <ul class="tab-ul">
+                    <li class="tab-li active"></li>
+                    <li class="tab-li"></li>
+                </ul>
+                <span class="turn right" data-click-type="right">></span>
+            </div>
+            <div class="exp-wrapper">
+                <ul class="exp-ul">
+                    <li class="exp-li active">
+                        <div class="comp-icon">
+                            <img class="img2" src="images/logo2.png"/>
+                        </div>
+                        <div class="comp-info">
+                            <a class="title" href="https://www.ddsoucai.com/trade/index.html" target="_blank">浙江金麦穗互联网金融信息服务有限公司--点点搜财</a>
+                            <div class="time">2016年5月--至今</div>
+                            <div class="technology">"gulp,webpack,Vue,angular,react,小程序等"</div>
+                            <ol>
+                                <li>负责企业站静态页开发</li>
+                                <li>完成对交易版理财业务的重构开发</li>
+                                <li>同期开始自己学习vue，ES6，小程序等技术</li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li class="exp-li">
+                        <div class="comp-icon">
+                            <img class="img1" src="images/logo1.png"/>
+                        </div>
+                        <div class="comp-info">
+                            <a class="title" href="http://www.xiangqu.com/" target="_blank">杭州偶然软件有限公司-想去 (部门)</a>
+                            <div class="time">2015年3月--2016年5月</div>
+                            <div class="technology">"html5,css3,javascript,jquery,less/sass,grunt,SEO,爬虫等"</div>
+                            <ol>
+                                <li>负责快速构建高质量移动APP/PC/微信页面</li>
+                                <li>高度组件化、模块化思维，拥有各平台调试能力</li>
+                                <li>学习百度数据统计及seo优化</li>
+                                <li>同期工作之余提升自己原生JS的编码能力</li>
+                            </ol>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="section page page5"></div>
     <div class="section page page6">
         <h2>联系我</h2>
@@ -99,6 +146,8 @@
 <script src="fullPage.js"></script>
 <script>
     $(document).ready(function() {
+        var exp_now = 1;
+        var LENGTH = $('.exp-wrapper .exp-ul li.exp-li').length;
         $('#fullpage').fullpage({
             //Navigation
             lockAnchors: false,
@@ -167,6 +216,28 @@
             afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
             onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
         });
+
+        //经历切换
+        function tabClick(type){
+            if(type=='left'){
+                if(exp_now >= LENGTH){
+                    exp_now = 1;
+                } else {
+                    exp_now ++;
+                }
+            } else {
+                if(exp_now <= 1){
+                    exp_now = LENGTH;
+                } else {
+                    exp_now --;
+                }
+            }
+            $('.exp-wrapper .exp-ul li.exp-li').eq(exp_now-1).addClass('active').siblings().removeClass('active');
+            $('.tab-ul .tab-li').eq(exp_now-1).addClass('active').siblings().removeClass('active');
+        }
+        $('.turn').click(function(){
+            tabClick($(this).attr('data-click-type'));
+        })
     });
 </script>
 </body>

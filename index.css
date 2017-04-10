@@ -226,7 +226,7 @@ form {
   display: flex;
   flex-wrap: wrap;
   padding-left: 30px;
-  margin-top: 20px; }
+  margin-top: 22px; }
 #fullpage .page3 .tag {
   position: relative;
   height: 36px;
@@ -258,9 +258,9 @@ form {
     left: 0;
     top: 14px; }
   #fullpage .page3 .tag.one-B {
-    background: blueviolet; }
+    background: #afe22b; }
     #fullpage .page3 .tag.one-B::after {
-      border-right-color: blueviolet; }
+      border-right-color: #afe22b; }
   #fullpage .page3 .tag.two {
     background: sandybrown; }
     #fullpage .page3 .tag.two::after {
@@ -269,6 +269,114 @@ form {
     background: darkturquoise; }
     #fullpage .page3 .tag.three::after {
       border-right-color: darkturquoise; }
+#fullpage .page4 .page-wrapper {
+  position: relative;
+  margin-top: 42px;
+  width: 750px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+  background: #fff; }
+  #fullpage .page4 .page-wrapper .change {
+    position: absolute;
+    bottom: -2px;
+    overflow: hidden;
+    height: 36px;
+    width: 750px;
+    text-align: center;
+    z-index: 7; }
+  #fullpage .page4 .page-wrapper .tab-ul {
+    display: inline-block; }
+  #fullpage .page4 .page-wrapper .tab-li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #a8d0e2;
+    display: inline-block;
+    margin: 10px 4px 0; }
+    #fullpage .page4 .page-wrapper .tab-li.active {
+      background: #4b85a0; }
+  #fullpage .page4 .page-wrapper .turn {
+    width: 30px;
+    height: 30px;
+    display: block;
+    line-height: 24px;
+    text-align: center;
+    overflow: hidden;
+    background: #4b85a0;
+    color: #fff;
+    font-size: 20px;
+    z-index: 6;
+    opacity: .5; }
+    #fullpage .page4 .page-wrapper .turn.left {
+      float: left; }
+    #fullpage .page4 .page-wrapper .turn.right {
+      float: right; }
+#fullpage .page4 .exp-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  #fullpage .page4 .exp-wrapper .exp-ul {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #fullpage .page4 .exp-wrapper .exp-ul .exp-li {
+      display: flex;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      width: 750px;
+      border-radius: 10px;
+      margin-left: 45px;
+      transition: all 1s ease-out;
+      background: #4b85a0;
+      opacity: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform: scale(0.8);
+      padding: 20px; }
+      #fullpage .page4 .exp-wrapper .exp-ul .exp-li.active {
+        margin-left: 0;
+        z-index: 3;
+        background: #fff;
+        opacity: 1;
+        transform: scale(1); }
+      #fullpage .page4 .exp-wrapper .exp-ul .exp-li .comp-icon {
+        flex: 0 0 150px; }
+        #fullpage .page4 .exp-wrapper .exp-ul .exp-li .comp-icon .img1 {
+          width: 100%;
+          margin-top: 138px; }
+        #fullpage .page4 .exp-wrapper .exp-ul .exp-li .comp-icon .img2 {
+          width: 100%;
+          margin-top: 127px; }
+      #fullpage .page4 .exp-wrapper .exp-ul .exp-li .comp-info {
+        flex: 1;
+        padding-left: 50px; }
+        #fullpage .page4 .exp-wrapper .exp-ul .exp-li .comp-info .title {
+          color: #4b85a0;
+          font-size: 19px;
+          font-weight: 600;
+          margin-top: 18px; }
+        #fullpage .page4 .exp-wrapper .exp-ul .exp-li .comp-info .time {
+          color: #4b85a0;
+          margin-top: 15px;
+          font-size: 16px; }
+        #fullpage .page4 .exp-wrapper .exp-ul .exp-li .comp-info .technology {
+          color: #4b85a0;
+          margin-top: 15px;
+          font-size: 16px; }
+        #fullpage .page4 .exp-wrapper .exp-ul .exp-li .comp-info ol {
+          color: #4b85a0;
+          margin-top: 46px; }
+          #fullpage .page4 .exp-wrapper .exp-ul .exp-li .comp-info ol li {
+            list-style: disc;
+            color: #000;
+            margin-top: 10px; }
 #fullpage .page6 .contact-wrapper {
   color: #fff;
   width: 336px;

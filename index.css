@@ -221,6 +221,86 @@ form {
     color: #fff;
     font-size: 15px;
     letter-spacing: 2px; }
+#fullpage .page3 .tag-wrapper {
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 30px;
+  margin-top: 20px; }
+#fullpage .page3 .tag {
+  position: relative;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 15px 0 20px;
+  background: #000;
+  color: #fff;
+  margin-top: 30px;
+  margin-left: 3px;
+  opacity: 1;
+  margin-right: 55px; }
+  #fullpage .page3 .tag:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-right: 18px solid #000;
+    left: -18px;
+    top: 0; }
+  #fullpage .page3 .tag:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    left: 0;
+    top: 14px; }
+  #fullpage .page3 .tag.one-B {
+    background: blueviolet; }
+    #fullpage .page3 .tag.one-B::after {
+      border-right-color: blueviolet; }
+  #fullpage .page3 .tag.two {
+    background: sandybrown; }
+    #fullpage .page3 .tag.two::after {
+      border-right-color: sandybrown; }
+  #fullpage .page3 .tag.three {
+    background: darkturquoise; }
+    #fullpage .page3 .tag.three::after {
+      border-right-color: darkturquoise; }
+#fullpage .page6 .contact-wrapper {
+  color: #fff;
+  width: 336px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 25px; }
+  #fullpage .page6 .contact-wrapper:first-of-type {
+    margin-top: 45px; }
+  #fullpage .page6 .contact-wrapper .icon {
+    flex: 0 0 143px;
+    vertical-align: middle; }
+    #fullpage .page6 .contact-wrapper .icon::before {
+      vertical-align: middle;
+      content: "\ea86";
+      font-size: 22px;
+      color: #fff;
+      margin-right: 10px; }
+  #fullpage .page6 .contact-wrapper .icon-mail4:before {
+    content: "\ea86"; }
+  #fullpage .page6 .contact-wrapper .text {
+    flex: 1; }
+    #fullpage .page6 .contact-wrapper .text a {
+      font-style: normal;
+      color: #fff;
+      text-decoration: underline; }
+  #fullpage .page6 .contact-wrapper .icon-mobile2:before {
+    content: "\e959"; }
+  #fullpage .page6 .contact-wrapper .icon-bubble2:before {
+    content: "\e96e"; }
+  #fullpage .page6 .contact-wrapper .icon-github:before {
+    content: "\eab0"; }
 
 .icon-home2:before {
   content: "\e901"; }

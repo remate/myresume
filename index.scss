@@ -333,7 +333,7 @@ form {
       .change{
         position: absolute;
         bottom:-2px;
-        overflow: hidden;
+        //overflow: hidden;
         height:36px;
         width:750px;
         //left:50%;
@@ -356,6 +356,7 @@ form {
         }
       }
       .turn{
+        position: relative;
         width:30px;
         height:30px;
         display: block;
@@ -367,11 +368,21 @@ form {
         font-size: 20px;
         z-index: 6;
         opacity: .5;
+        width:100px;
+        height:100px;
         &.left{
-          float: left;
+          position: absolute;
+          left:100px;
+          bottom:2px;
+          background: url("images/left.png") no-repeat;
+          background-size: contain;
         }
         &.right{
-          float: right;
+          position: absolute;
+          right:100px;
+          bottom:0px;
+          background: url("images/right.png") no-repeat;
+          background-size: contain;
         }
       }
     }

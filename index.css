@@ -280,7 +280,6 @@ form {
   #fullpage .page4 .page-wrapper .change {
     position: absolute;
     bottom: -2px;
-    overflow: hidden;
     height: 36px;
     width: 750px;
     text-align: center;
@@ -297,6 +296,7 @@ form {
     #fullpage .page4 .page-wrapper .tab-li.active {
       background: #4b85a0; }
   #fullpage .page4 .page-wrapper .turn {
+    position: relative;
     width: 30px;
     height: 30px;
     display: block;
@@ -307,11 +307,21 @@ form {
     color: #fff;
     font-size: 20px;
     z-index: 6;
-    opacity: .5; }
+    opacity: .5;
+    width: 100px;
+    height: 100px; }
     #fullpage .page4 .page-wrapper .turn.left {
-      float: left; }
+      position: absolute;
+      left: 100px;
+      bottom: 2px;
+      background: url("images/left.png") no-repeat;
+      background-size: contain; }
     #fullpage .page4 .page-wrapper .turn.right {
-      float: right; }
+      position: absolute;
+      right: 100px;
+      bottom: 0px;
+      background: url("images/right.png") no-repeat;
+      background-size: contain; }
 #fullpage .page4 .exp-wrapper {
   width: 100%;
   height: 100%;
